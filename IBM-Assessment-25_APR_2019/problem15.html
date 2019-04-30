@@ -1,0 +1,26 @@
+<!-- Write a program in JS to highlight the bold words of a paragraph in HTML, 
+on click of a button (Hint: You can use getElementsByTagName()) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlighting the bold words of a para</title>
+</head>
+<body>
+	<center>
+		<button onclick="strHighlight();">Highlight the bold part</button>
+	<p style="font-size: 30px">"Click the Button to change the  wrriten style of the paragraph."-<b>Look It is Highlighted</b></p>
+		
+</center>
+</body>
+<script type="text/javascript">
+
+		function strHighlight()
+			{
+			var n = document.getElementsByTagName("B");
+			for (var i = 0; i < n.length; i++) {
+				document.getElementsByTagName("B")[i].style.backgroundColor = "#B0E0E6";
+			}
+		}
+</script>
+</html>
+

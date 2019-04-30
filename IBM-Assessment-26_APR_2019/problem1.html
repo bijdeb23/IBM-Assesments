@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Current Date and Time Using DOM</title>
+</head>
+<body>
+
+	<button onclick="myFunction()">Click Here to See Current Date and Time</button>
+
+	<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = new Date(document.lastModified);
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

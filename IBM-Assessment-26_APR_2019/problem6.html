@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type='text/javascript'>
+        function addFields(){
+            
+            var number = prompt("Enter How Many No. of Text Box You want to Create:-",0);
+            
+            for (var i = 0 ; i < number ; i++)
+            {
+                
+                document.getElementById("container").appendChild(document.createTextNode("Text Box No " + (i+1) + ":-"));
+                
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "member" + i;
+                document.getElementById("container").appendChild(input);
+                document.getElementById("container").appendChild(document.createElement("BR"));
+                document.getElementById("container").appendChild(document.createElement("BR"));
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+            <button class="btn btn-success" onclick="addFields();" style="margin-top: 30px;">Click Here to Add Text Box</button>
+            <br>
+            <br>
+            <br>
+            <div id="container">
+            </div>
+    </center>
+</body>
+</html>

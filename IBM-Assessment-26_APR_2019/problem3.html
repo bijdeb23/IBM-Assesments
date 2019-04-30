@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fetch the last link Attribute value and Display</title>
+</head>
+<body>
+	<center>
+			<a href="home.html">HOME</a><br>
+			<a href="contact.html">CONTACT</a><br>
+			<a href="aboutUs.html">ABOUT US</a><br>
+
+		<button onclick="fetchLink();">Fetch The Last Link</button>
+		<p id="link"></p>
+	</center>
+<script type="text/javascript">
+	function fetchLink(){
+		var l = document.links.length;
+		var x = document.links[l-1].href;
+		document.getElementById('link').innerHTML = x;
+		document.getElementById('link').style.fontSize = "28px";
+		document.getElementById('link').style.backgroundColor = "blue";
+	}
+</script>
+</body>
+</html>

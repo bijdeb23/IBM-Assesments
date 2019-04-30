@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove all the options of a select box on a button click and then add 
+one option and select it.</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<select id='myOption'>
+	  <option value="porsche">PORSCHE</option>
+	  <option value="lamborgini">LAMBORGINI</option>
+	  <option value="bmw">BMW</option>
+	  <option value="audi">AUDI</option>
+    </select>
+
+    <button id="btn1">Click To Remove All</button>
+
+    <script type="text/javascript">
+    	
+    	$(document).ready(function() {
+    		
+    		$("#btn1").click(function(event) {
+    			
+    			$("#myOption").empty().append('<option selected="selected" value="cooper">Mini Cooper</option>');
+
+
+    		});
+
+
+    	});
+
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- Write a JavaScript function to merge two arrays and removes all duplicates elements. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Merge Arrays and delete duplicate elements</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var arr1 = [];
+	var arr2 = [];
+	var arr1Size= prompt("Enter the 1st array size:-");
+	for (var i = 0; i < arr1Size; i++) {
+			arr1[i] = prompt("Enter the number you want to put in 1st Array:-",0);
+		}
+
+	var arr2Size= prompt("Enter the 2nd array size:-");
+	for (var j = 0; j < arr2Size; j++) {
+			arr2[j] = prompt("Enter the number you want to put in 2nd Array:-");
+		}	
+	function merge_array(array1, array2) {
+    var resultArr = [];
+    var newArr = arr1.concat(arr2);
+    var len = newArr.length;
+    var check = {};
+
+    while(len--)
+    {
+    	var item = newArr[len];
+
+    	if(!check[item])
+    	{
+    		resultArr.unshift(item);
+    		check[item] = true;
+    	}
+    }
+
+    return resultArr;
+}
+
+document.write(merge_array(arr1, arr2));
+	</script>
+
+</body>
+</html>

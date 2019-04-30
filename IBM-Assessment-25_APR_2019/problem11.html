@@ -1,0 +1,30 @@
+<!-- Write a JavaScript function to find a word and number of it's occurances within a string. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word and It's occurance within a String</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+		var str = prompt("Enter the String :- ",0);
+		var arr=str.split(' ');
+		var subStr = prompt("Enter the sunstring you want to match:- ", 0);
+		var count=0;
+		for(var i=0; i<str.length; i++)
+		{
+			if (arr[i]==subStr) 
+				count++;
+		}
+		if (count==0) 
+		{
+			alert("Sub String is not there");
+		}
+		else
+		{
+			alert("The Sub String '" + subStr + "' is in Main String for '" + count + "' no. of time ");
+		}
+</script>
+</body>
+</html>

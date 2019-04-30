@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set the value in an empty span using jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<p>We are in <span class="sp1"></span> world!!</p>
+
+	<button id="butt">Click Here to Span the jQuery</button>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+			
+			$("#butt").click(function(event) {
+				/* Act on the event */
+
+				$(".sp1").html("jQuery");
+				$(".sp1").css({
+					backgroundColor: 'yellow',
+					fontSize: '20px'
+				});
+
+
+
+
+			});
+		});
+		
+	</script>
+
+
+
+</body>
+</html>

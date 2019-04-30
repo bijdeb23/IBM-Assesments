@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disable The Combo Drop-Down</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+            <h4>Foods:- </h4>
+            <select id="checkbox" name="food" multiple>
+                <option value="chicken">Chicken</option>
+                <option value="mutton">Mutton</option>
+                <option value="biriyani">Biriyani</option>
+                <option value="soup">Soup</option>
+                <option value="rice">Rice</option>
+                <option value="egg">Egg</option>
+            </select>
+
+            <button class="btn btn-info" onclick="disable();">Click to Disable the Checkbox</button>
+
+        </div>
+
+    <script type="text/javascript">
+    	function disable(){
+    		document.getElementById("checkbox").disabled = true;
+    	}
+    </script>
+</body>
+</html>

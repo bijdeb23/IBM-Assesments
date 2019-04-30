@@ -1,0 +1,22 @@
+<!-- Write a JavaScript function to count the occurrence of a substring in a string. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Repetation of Substring in a String</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = prompt("Eneter a String: ",0);
+		var split = str.split(' ');
+		var subStr = prompt("Eneter a Sub String: ",0);
+		var counter=0;
+		for(var i=0; i<str.length; i++)
+		{
+			if (split[i]==subStr) 
+				counter++;
+		}
+			alert("The Substring repeated fortime:- " + counter);
+	</script>
+
+</body>
+</html>

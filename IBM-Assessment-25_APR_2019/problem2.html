@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to converts a specified number to an array of digits.  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array of Digits</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var num = prompt("Enter A Number You Want:-",0); //
+		var i = num.length;
+		alert("Total count of digits of the number  is:-"+i);
+		var arr = [];
+		for (i = num.length; i > 0; i--) {
+			
+			arr[i-1] = Math.floor(num % 10);
+			num = Math.floor(num / 10);
+		}
+		alert("The Array is:- " + arr);
+	</script>
+
+</body>
+</html>

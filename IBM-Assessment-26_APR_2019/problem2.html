@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content Change of a Paragraph using DOM</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<center>
+
+	<p id="para" style="font-size: 20px;">International Business Machines Corporation (IBM) is an American multinational information technology company headquartered in Armonk, New York, with operations in over 170 countries. The company began in 1911, founded in Endicott, New York, as the Computing-Tabulating-Recording Company (CTR) and was renamed "International Business Machines" in 1924.</p>
+
+	<button class="btn btn-info" onclick="paraChange();">Click Here To Change Para</button>
+</center>
+
+	<script type="text/javascript">
+
+		function paraChange(){
+
+			var x = prompt("Enter A Paragraph to Change the Content of the Given Paragraph", 0);
+
+			document.getElementById('para').innerHTML = x;
+			document.getElementById('para').style.fontSize = "30px";
+
+
+			var n = document.getElementsByTagName("P");
+			for (var i = 0; i < n.length; i++) {
+				document.getElementsByTagName("P")[i].style.backgroundColor = "#B0E0E6";
+			}
+
+	}
+
+	</script>
+
+</body>
+</html>

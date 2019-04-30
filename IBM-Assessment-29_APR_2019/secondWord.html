@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make second word of every div in bold</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div> I am a Bad Boy.</div>
+<div>Hussain is also a Bad Guy.</div>
+<div>Apurva is one of us , but she is a girl</div>
+<div>We are crime partners.</div>
+
+
+	<button class="bt">APPEND</button>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("button").addClass('btn btn-info');
+			$(".bt").click(function(event) {
+				
+				$("div").html("Movie <b>"+" KALANK"+"</b> was been added");
+				
+
+
+			});
+
+
+
+
+		});
+	</script>
+
+
+</body>
+</html>

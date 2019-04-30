@@ -1,0 +1,27 @@
+<!-- Write a JavaScript function that finds the not repeating character in a passed in string. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Not repeating character</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = prompt("Enter The String:-");
+		var counter = 1;
+		
+		var repeat = '';
+		for (var i = 0; i < str.split('').length; i++) {
+			repeat = str.split('')[i];
+			for (var j = 0; j < str.split('').length; j++) {
+				if (repeat == str.split('')[j]) 
+					counter++;
+			}
+
+			if(counter < 3)
+				document.write(repeat + " ");
+			counter = 1;
+		}
+	</script>
+
+</body>
+</html>

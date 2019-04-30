@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggele Switch</title>
+	<link rel="stylesheet" type="text/css" href="toggleButton.css">
+
+</head>
+<body>
+	<center>
+
+		<div class="onoffswitch" style="margin-top: 50px;">
+		    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="onoffSwitch();">
+		    <label class="onoffswitch-label" for="myonoffswitch">
+		        <span class="onoffswitch-inner"></span>
+		        <span class="onoffswitch-switch"></span>
+		    </label>
+		</div>
+			
+			<img id="showImage" src="1.jpg" style="width: 800px; height: 0; transition: 2s all ease;">
+
+	</center>
+
+	<script type="text/javascript">
+
+		function onoffSwitch(){
+
+			var checkBox = document.getElementById("myonoffswitch");
+			if (checkBox.checked == true){
+				 
+				document.getElementById('showImage').style.height = "500px";
+				document.getElementById('showImage').style.border = "5px solid #000";
+				
+
+			} else{
+
+			    document.getElementById('showImage').style.height = 0;
+			    document.getElementById('showImage').style.border = 0;
+			}
+		}
+		
+	</script>
+
+</body>
+</html>
