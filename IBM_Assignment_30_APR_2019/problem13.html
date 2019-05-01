@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>When a user selects an option in combo box, alert that value on screen.</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<select id="selectoption">
+		<option value="Bijoy">Bijoy</option>
+		<option value="Akash">Akash</option>
+		<option value="Megh">Megh</option>
+		<option value="Anup">Anup</option>
+	</select>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$("#selectoption").change(function(){
+
+	         var selected = $(this).children("option:selected").val();
+	        alert("You have selected Option - " + selected);
+
+    	});
+
+	});
+</script>
+</body>
+</html>

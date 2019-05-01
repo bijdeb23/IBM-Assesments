@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delay the execution of subsequent items in the animation queue.</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		img
+		{
+			height: 200px;
+			width: 350px;
+			margin-left: 0px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<img src="planes/1.png" id="img1"><br>
+	<img src="planes/2.jpg" id="img2"><br>
+	<img src="planes/3.jpg" id="img3"><br>
+
+    <button>Click Here!</button>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() 
+		{
+
+			$('button').click(function() 
+			{		
+					$("#img1").delay(3000).animate({marginLeft: '500px'}, 'slow');
+					$("#img2").delay(3000).animate({marginLeft: '500px'}, 'slow');
+					$("#img3").delay(3000).animate({marginLeft: '500px'}, 'slow');
+					$("#img1").delay(3000).animate({marginLeft: '0px'}, 'slow');
+					$("#img2").delay(3000).animate({marginLeft: '0px'}, 'slow');
+					$("#img3").delay(3000).animate({marginLeft: '0px'}, 'slow');
+					
+			});
+		});
+	</script>
+</body>
+</html>

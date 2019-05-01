@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Move an element from one DIV to another.</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		div{
+			height: 300px;
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1" style="background-color: cyan; font-size: 30px;">
+		
+			<textarea id="p1">Welcome to Swapping of Div in Html</textarea>
+		
+	</div>
+	<div id="div2" style="background-color: yellow; font-size: 30px;">
+		
+	</div>
+	<br>
+	<button id="butt">Click to Move!</button>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('#butt').click(function() 
+			{
+				$('#div2').html($('#div1').html());
+				$('#p1').remove();
+			});
+		});
+	</script>
+</body>
+</html>

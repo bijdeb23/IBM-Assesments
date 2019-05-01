@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove all spans from the html dom</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+	<div>
+		<span>Bijoy</span>
+
+		<span>Akash</span>
+		
+		<span>Megh</span>
+	</div>
+	
+	<button>Click to remove all the spans!</button>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('button').click(function() {
+				$('span').remove();
+			});
+		});
+	</script>
+</body>
+</html>

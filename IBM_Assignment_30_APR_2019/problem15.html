@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>On a button click, open a new window and then check if that window has been closed or is still open</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+</head> 
+<body> 
+
+
+    <button id="btn1">Open</button>
+    <button id="btn2">Check if it is closed or not!!</button>
+    <button id="btn3">Close </button> 
+    <div id="dialogue"></div>
+
+
+  <script> 
+
+      $(document).ready(function() {
+        
+        var win;
+
+        $("#btn1").click(function() {
+
+          win = window.open("https://www.google.com/", "_blank", "width=720, height=450");
+
+
+
+        });
+
+        $("#btn2").click(function() {
+
+          if (!win) 
+          {
+              alert("Window has never been opened!");
+          } 
+          else 
+          {
+              if (win.closed) 
+              { 
+               alert("Window has been closed!");
+              } 
+              else 
+              {
+                alert("Window has not been closed!");
+              }
+
+          }
+
+
+        });
+
+        $("#btn3").click(function() {
+
+           if (win) 
+           {
+                  win.close();
+            }
+
+        });
+
+
+
+      });
+      
+
+  </script> 
+
+</body> 
+</html>
+

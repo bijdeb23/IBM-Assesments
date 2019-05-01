@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Count the number of options within a combo select box.</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<select id="comboBox">
+		<option id="op1">Bijoy</option>
+		<option id="op2">Apurva</option>
+		<option id="op3">Gargee</option>
+		<option id="op4">Hussain</option>
+		<option id="op4">Sourish</option>
+	</select>
+	<br>
+	<br>
+	<button>Count The No. of options in  Combo Box!</button>
+
+	<p id="p1"></p>
+
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$('button').click(function() {
+				var x = $('#comboBox').children('option').length;
+				$('#p1').html('Number of options in The Combo Box is: '+ x);
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Limit the characters in textbox</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<textarea id="text" rows="10" cols="50" placeholder="Enter Your text here"></textarea>
+
+	<h3><p id="show"></p></h3>
+	<h3><p id="print"></p></h3>
+
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{	
+			var leng = 20;
+			
+			$('#show').html('Maximum Characters: '+ leng);
+			$('#print').html('Remaining Characters: '+ leng);
+
+			$('#text').keyup(function() 
+			{
+				var len = $(this).val().length;
+				
+				 if (len > leng) 
+				 {
+					alert("You are exceeding the Limit");
+				 } else
+				  {
+				  	$('#print').html('Remaining Characters: '+ (leng-len));
+				  }
+				
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On right click inside a div, make the div box larger.</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style type="text/css">
+		div{
+			height: 200px;
+			width: 300px;
+			background-color: cyan;
+			font-size: 30px;
+			
+		}
+	</style>
+
+</head>
+<body>
+	
+	<div id="div1">
+		<p>Welcome to jQuery</p>
+	</div>
+	<script type="text/javascript">
+
+		$(document).ready(function() 
+		{
+			$('#div1').mousedown(function(e) {
+
+			if (e.button==2) 
+				{
+					$(this).animate({height: '400px',width: '600px'},3000); 
+
+				} else 
+				{
+					alert('Only Right Click is Usefull!');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
